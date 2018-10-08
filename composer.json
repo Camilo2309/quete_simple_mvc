@@ -6,7 +6,9 @@
             "email": "camilo.bolanos23@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "nikic/fast-route": "^1.3"
+    },
 
     "autoload": {
         "psr-4": {
