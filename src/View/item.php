@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head> ... </head>
+<head>
+    <title>MVC 2</title>
+</head>
 <body>
 <section>
     <h1>Items</h1>

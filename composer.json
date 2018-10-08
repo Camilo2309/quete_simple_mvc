@@ -1,0 +1,17 @@
+{
+    "name": "camilo/quete_simple_mvc",
+    "authors": [
+        {
+            "name": "Camilo",
+            "email": "camilo.bolanos23@hotmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "App\\": "app/"
+        }
+    }
+}
