@@ -1,7 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: camilo
- * Date: 08/10/18
- * Time: 20:32
- */
+// routing.php
+$routes = [
+    'Item' => [ // Controller
+        ['index', '/', 'GET'], // action, url, HTTP method
+        ['show', '/item/{id}', 'GET'], // action, url, HTTP method
+    ],
+    'Category' => [
+        ['index', '/categories', 'GET'],
+        ['show', '/category/{id}', 'GET'],
+    ],
+];

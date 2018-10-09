@@ -21,6 +21,6 @@ class ItemController
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneItem($id);
 
-        require __DIR__ . '/../View/showItem.php';
+        require __DIR__ . '/../View/Item/show.php';
     }
 }

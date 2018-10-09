@@ -1,13 +1,15 @@
 <?php
-
-require __DIR__ . '/../vendor/autoload.php';
-
+/*
 $controller = new \Controller\ItemController();
 
-$controller->index();
+$controller->index();*/
 
 require __DIR__ . '/../vendor/autoload.php';
 
+require __DIR__ . '/../app/dispatcher.php';
+
+
+/*
 $route = $_GET['route'] ?? '';
 
 if ($route === 'items') {
@@ -20,4 +22,4 @@ if ($route === 'items') {
 } else {
     header("HTTP/1.0 404 Not Found");
     echo 'Page introuvable';
-}
+}*/

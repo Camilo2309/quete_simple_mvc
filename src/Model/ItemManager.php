@@ -8,7 +8,7 @@ require __DIR__ . '/../../app/db.php';
 
 // récupération de tous les items
 
-class itemManager
+class ItemManager
 {
 
 
