@@ -18,7 +18,6 @@ class CategoryController
         $categoryManager = new CategoryManager();
         $categories = $categoryManager->selectAllCategories();
         require __DIR__ . '/../View/Category/category.php';
-        return $categories;
     }
     public function show(int $id)
     {
@@ -26,6 +25,5 @@ class CategoryController
         $category = $categoryManager->selectOneCategory($id);
 
         require __DIR__ . '/../View/Category/show.php';
-        return $category;
     }
 }
