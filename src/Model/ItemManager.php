@@ -19,7 +19,8 @@ class ItemManager
             $res = $pdo->query($query);
             return $res->fetchAll();
         }
-    public function selectOneItem(int $id) : array
+
+    public function selectOneItem(int $id)
     {
         $pdo = new \PDO(DSN, USER, PASS);
         $query = "SELECT * FROM item WHERE id = :id";
@@ -28,5 +29,7 @@ class ItemManager
         $statement->execute();
         // contrairement à fetchAll(), fetch() ne renvoie qu'un seul résultat
         return $statement->fetch();
+
+
     }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -18,4 +18,17 @@
 <a href='/'>Back to list</a>
 </main>
 </body>
-</html>
+</html>-->
+{% extends 'layout.html.twig' %}
+
+{% block title %}Les Items{% endblock %}
+
+{% block content %}
+<h1>Items ID</h1>
+<ul>
+    {% for item in items %}
+    <li>{{ item.title }}</li>
+        <li>{{ item.id }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

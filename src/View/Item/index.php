@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -14,10 +14,10 @@
     <h1>Items</h1>
     <ul>
         <?php
-        foreach ($categories as $category) : ?>
-            <li><?= $category['name'] ?></li>
+        foreach ($items as $item) : ?>
+            <li><?= $item['title'] ?></li>
         <?php endforeach ?>
     </ul>
 </section>
 </body>
-</html>l>
+</html>

@@ -2,22 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Simple MVC</title>
-
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    {% block stylesheet %}{% endblock %}
     <link rel="icon" href="/assets/images/favicon.png">
 </head>
+
 <body>
-<section>
-    <h1>Items</h1>
-    <ul>
-        <?php
-        foreach ($items as $item) : ?>
-            <li><?= $item['title'] ?></li>
-        <?php endforeach ?>
-    </ul>
-</section>
+{% block content %}{% endblock %}
+{% block javascript %}{% endblock %}
 </body>
 </html>
