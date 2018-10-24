@@ -5,13 +5,45 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% block stylesheet %}{% endblock %}
     <link rel="icon" href="/assets/images/favicon.png">
 </head>
 
 <body>
-{% block content %}{% endblock %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow bg-grey">
+
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/item/add">AJOUTER UN ITEMS</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/">ITEMS</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/category/add">AJOUTER UNE CATEGORIE</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/categories">CATEGORIES</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="col-md-6">
+    {% block content %}{% endblock %}
+</div>
+
 {% block javascript %}{% endblock %}
 </body>
 </html>

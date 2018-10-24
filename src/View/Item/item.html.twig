@@ -4,9 +4,28 @@
 
 {% block content %}
         <h1>Titres des Items</h1>
-            <ul>
-                {% for item in items %}
-                <li>{{ item.title }}</li>
-                {% endfor %}
-            </ul>
+    <div class="row">
+    <div class="container" style="padding-top: 5%">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>ITEMS</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+             <tr>
+                     <td>
+                         <a href="/item/{{ item.id }}"><h5>{{ item.title }}</h5></a>
+                     </td>
+                     <td>
+                         <a href="/item/edit/{{ item.id }}" style="margin-right: 5px;"><button type="button" class="btn btn-outline-secondary">Edit</button></a>
+                         <a href="/item/delete/{{ item.id }}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+                     </td>
+             </tr>
+        {% endfor %}
+        </tbody>
+         </table>
+    </div>
+    </div>
 {% endblock %}

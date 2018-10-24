@@ -1,12 +1,31 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}Les catégories{% endblock %}
+{% block title %}Les Categories{% endblock %}
 
 {% block content %}
-    <h1>Titres des catégories</h1>
-    <ul>
-        {% for category in categories %}
-            <li>{{ category.name }}</li>
-        {% endfor %}
-    </ul>
+    <h1>Titres des Categories</h1>
+    <div class="row">
+        <div class="container" style="padding-top: 5%">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>CATEGORIES</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for category in categories %}
+                    <tr>
+                        <td>
+                            <a href="/category/{{ category.id }}"><h5>{{ category.name }}</h5></a>
+                        </td>
+                        <td>
+                            <a href="/category/edit/{{ category.id }}" style="margin-right: 5px;"><button type="button" class="btn btn-outline-secondary">Edit</button></a>
+                            <a href="/category/delete/{{ category.id }}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}
